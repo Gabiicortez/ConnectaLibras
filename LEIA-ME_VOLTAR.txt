@@ -1,0 +1,6 @@
+BOTAO VOLTAR
+Login: nao exibe o botao nem reserva espaco para a barra de retorno.
+Home: o botao Voltar encerra a sessao e abre o Login, limpando as telas anteriores.
+Demais telas: o botao retorna a pagina anterior pela navegacao do Android.
+As demais configuracoes e o banco foram mantidos.
+Sintaxe Java verificada. Teste no emulador pendente neste ambiente.

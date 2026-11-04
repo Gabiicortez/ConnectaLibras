@@ -1,0 +1,16 @@
+{
+  "codigo_recebido": "ialibras_v6_1_automatica.py",
+  "sha256_codigo_recebido": "e48641ef3d51b4fb561e34ff6b654e381dfbacef918206ff1c2d6a065d2132be",
+  "nucleo_origem": "https://github.com/Gabiicortez/Connecta",
+  "commit_pesos": "9c82405e535479c38107e19435e0e5b215fe3242",
+  "pesos": "Modelos V5 do GitHub, exportados sem retreinamento",
+  "codigo_android": "app/src/main/python/usuario_ia/ialibras_v6_1_automatica.py",
+  "equivalencia_codigo_github": "Código idêntico após normalizar quebras de linha",
+  "sha256_originais": {
+    "libras_core.py": "639df645c635751800fcea0cf458596207e6ead83dcbc2be7ce8c6293d18eb2b",
+    "libras_static_v5.pkl": "9b860603d78c322c03273a4d69f717697771819f8194519c29773d9a075e7597",
+    "libras_dynamic_v5.keras": "3f4f3ad680d7514cf5fd1e49644305554444f0b8f0a6e4adea205d5ffc07d2ba",
+    "libras_static_labels_v5.json": "5e9ed7a72fb80e89dd7ef77b0a21a9760caf5be1d52e3345b579f95d44c88f4b",
+    "libras_dynamic_labels_v5.json": "f5ab9b6d8464b7963ec0138a36425b530fc2d4fcf92f69538c5ea295e1c8438b"
+  }
+}

@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#F8FAFC">
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@id/bottomNav">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+
+            <!-- Logo -->
+            <ImageView android:id="@+id/imgLogo" android:layout_width="220dp" android:layout_height="100dp" android:layout_gravity="center" android:src="@drawable/logo_connecta_horizontal" android:contentDescription="Logo Connecta Libras"/>
+
+            <!-- Saudação -->
+            <TextView android:id="@+id/txtBoasVindas" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="Olá, Usuário" android:textColor="#0F172A" android:textSize="28sp" android:textStyle="bold"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bem-vindo ao Connecta Libras" android:textColor="#64748B" android:textSize="16sp"/>
+
+            <!-- Card Conversa -->
+            <LinearLayout android:id="@+id/btnIniciarConversa" android:layout_width="match_parent" android:layout_height="180dp" android:layout_marginTop="24dp" android:background="@drawable/bg_connecta_card" android:clickable="true" android:focusable="true" android:gravity="center" android:orientation="vertical" android:padding="24dp">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🎥" android:textSize="42sp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Traduzir Libras" android:textColor="#FFFFFF" android:textSize="22sp" android:textStyle="bold"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tradutor Libras com IA" android:textColor="#FFFFFF" android:textSize="14sp"/>
+
+            </LinearLayout>
+
+            <!-- Acesso rápido -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="28dp" android:text="Acesso rápido" android:textColor="#0F172A" android:textSize="20sp" android:textStyle="bold"/>
+
+            <Button android:id="@+id/btnHistorico" android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginTop="12dp" android:text="Histórico de Traduções" android:background="@drawable/bg_connecta_button" android:backgroundTint="#D9F4F1" android:textColor="#0F172A"/>
+
+            <Button android:id="@+id/btnFavoritos" android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginTop="12dp" android:text="Traduções favoritas" android:background="@drawable/bg_connecta_button" android:backgroundTint="#D9F4F1" android:textColor="#0F172A"/>
+            <Button android:id="@+id/btnDicionario" android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginTop="12dp" android:text="Dicionário local" android:background="@drawable/bg_connecta_button" android:backgroundTint="#D9F4F1" android:textColor="#0F172A"/>
+            <Button android:id="@+id/btnModeracao" android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginTop="12dp" android:text="Moderação" android:visibility="gone" android:background="@drawable/bg_connecta_button" android:backgroundTint="@color/secondary" android:textColor="#FFFFFF"/>
+            <Button android:id="@+id/btnPerfil" android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginTop="12dp" android:text="Meu Perfil" android:background="@drawable/bg_connecta_button" android:backgroundTint="@color/secondary" android:textColor="#FFFFFF"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Barra inferior -->
+    <LinearLayout android:id="@+id/bottomNav" android:layout_width="match_parent" android:layout_height="70dp" android:layout_alignParentBottom="true" android:background="#FFFFFF" android:gravity="center" android:orientation="horizontal" android:paddingLeft="18dp" android:paddingRight="18dp">
+
+        <ImageButton android:id="@+id/btnHome" android:layout_width="0dp" android:layout_height="56dp" android:layout_weight="1" android:background="?android:attr/selectableItemBackgroundBorderless" android:src="@drawable/nav_home" android:contentDescription="Início" android:padding="14dp" android:scaleType="fitCenter"/>
+
+        <ImageButton android:id="@+id/btnConversa" android:layout_width="0dp" android:layout_height="56dp" android:layout_weight="1" android:background="?android:attr/selectableItemBackgroundBorderless" android:src="@drawable/nav_translate" android:contentDescription="Tradutor de Libras" android:padding="14dp" android:scaleType="fitCenter"/>
+
+        <ImageButton android:id="@+id/btnPerfilNav" android:layout_width="0dp" android:layout_height="56dp" android:layout_weight="1" android:background="?android:attr/selectableItemBackgroundBorderless" android:src="@drawable/nav_profile" android:contentDescription="Perfil" android:padding="14dp" android:scaleType="fitCenter"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,53 @@
+Correção da câmera: bitmap reciclado — 23/10/2026
+
+Causa: LocalRecognizer.process fechava o MPImage e só depois lia os pixels do Bitmap usado por ele. O fechamento pode reciclar esse bitmap.
+Correção: RGB copiado antes de criar/fechar o MPImage; detecção mantém fechamento no bloco finally. O código não lê o Bitmap depois do fechamento.
+
+Regressão JVM usando o LocalRecognizer de produção e doubles de Android/MediaPipe/Python:
+- versão anterior reproduziu Can't call getPixels() on a recycled bitmap;
+- versão corrigida passou em 200 frames simulados, com RGB conferido;
+- fechamento do MPImage conferido também quando a detecção falha;
+- processamento depois de encerrar a sessão rejeitado.
+Esses testes simulam explicitamente o fechamento do MPImage reciclando o bitmap. Não executam MediaPipe/Android nativos.
+
+Compilação Android completa e teste físico desta correção: pendentes.
+Python continua 3.11. Pesos, código Python da IA e banco inicial preservados.
+
+--- Histórico das verificações anteriores ---
+
+Atualização para Python 3.11 — 23/10/2026
+
+Runtime no Gradle, scripts Windows e instruções atualizados para Python 3.11.
+Testes desta atualização: 7 testes da ponte passaram com CPython 3.11.17 e NumPy 1.26.2; modelos reais estático e GRU carregaram e produziram probabilidades finitas/somando 1; ponte completa recebeu frame sem mãos e encerrou corretamente.
+Distribuições Android NumPy 1.26.2 cp311 para arm64-v8a e x86_64 baixadas e integridade ZIP conferida.
+Nova compilação Android completa não foi executada nesta atualização. Câmera no aparelho permanece pendente.
+Os pesos e o código de inferência não foram alterados nesta atualização.
+
+--- Histórico de validação da entrega anterior com Python 3.12 ---
+
+Sua IA V6.1 adaptada para Python no Android — 23/10/2026
+
+Arquivo principal de referência: ialibras_v6_1_automatica.py enviado pelo usuário.
+Original preservado byte a byte em referencia_pc; hashes e origem dos pesos em ORIGEM_IA.json.
+libras_core.py e pesos V5: repositório Gabiicortez/Connecta, commit 9c82405e535479c38107e19435e0e5b215fe3242.
+Não foi recebido um novo .pkl/.keras neste anexo; os pesos incluídos são do GitHub.
+
+Paridade no computador com modelos originais scikit-learn 1.7.2 / TensorFlow CPU 2.20.0:
+- 56 entradas estáticas: dados sintéticos e amostras do dataset.
+- 53 sequências dinâmicas: dados sintéticos e amostras do dataset.
+- Mesma classe escolhida em todas essas 109 entradas/sequências.
+- Erro absoluto máximo estático: 2.9941632617713765e-8.
+- Erro absoluto máximo dinâmico: 2.384185791015625e-7.
+- 250 frames de sessão: texto, rótulo e confiança correspondentes à referência com modelos sklearn/TensorFlow, incluindo sinais repetidos, ausência de mãos e movimento.
+- Ponte completa Python com os modelos reais: carregamento, frame sem mãos e encerramento passaram.
+- 7 testes de contrato da ponte passaram; incluem retorno inválido, bytes com sinal simulados no PC, limpeza e erros de carregamento.
+
+Compilação :app:assembleDebug: PASSOU com AGP 8.7.3, Gradle 8.9, JDK 17, SDK 35, Chaquopy 17.0.0, Python 3.12 e NumPy 1.26.2.
+
+Ainda não houve execução em celular com câmera. Precisão em novos usuários, latência, memória e compatibilidade das bibliotecas nativas no aparelho não foram medidas.
+Os testes de paridade executaram NumPy do ambiente de validação no PC; o runtime Android utiliza a distribuição NumPy 1.26.2 para Android. A comparação no aparelho permanece pendente.
+
+Exportador de modelos testado com os pesos V5 reais: exportação, cópia do núcleo/detector e nova comparação de inferência passaram.
+Fontes e hashes dos modelos conferidos no APK final; original recebido preservado byte a byte; permissão INTERNET ausente no APK.
+
+Atualização Python 3.11: runtime e instruções ajustados de 3.12 para 3.11. A compilação Android registrada acima pertence à entrega anterior (3.12); nova compilação completa ainda pendente.

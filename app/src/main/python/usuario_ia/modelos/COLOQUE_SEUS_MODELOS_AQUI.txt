@@ -1,0 +1,1 @@
+Os modelos V5 já estão preparados aqui. Para atualizar a partir dos seus .pkl/.keras, use ferramentas_ia/preparar_modelos.py e gere outro APK. Veja LEIA-ME_IA.md.

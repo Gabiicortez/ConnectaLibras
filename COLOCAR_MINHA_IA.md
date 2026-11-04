@@ -1,0 +1,1 @@
+A entrada Python já foi conectada à sua IA V6.1 nesta entrega. Leia LEIA-ME_IA.md para instalar e para preparar pesos do seu computador. Não substitua o arquivo adaptado do Android pelo script completo de desktop: câmera, teclado e treinamento do PC usam uma interface diferente.

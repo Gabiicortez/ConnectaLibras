@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.ConnectaLibras" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="colorPrimary">#14B8A6</item>
+        <item name="colorPrimaryDark">#0F766E</item>
+        <item name="colorAccent">#2DD4BF</item>
+
+        <item name="android:statusBarColor">#14B8A6</item>
+
+    </style>
+
+</resources>

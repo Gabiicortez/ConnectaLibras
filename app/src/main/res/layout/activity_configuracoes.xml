@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#F8FAFC">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+
+        <!-- Título -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Configurações" android:textColor="#0F172A" android:textSize="28sp" android:textStyle="bold"/>
+
+        <!-- Card Notificações -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:background="#FFFFFF" android:elevation="4dp" android:orientation="horizontal" android:padding="16dp">
+
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Receber notificações" android:textColor="#0F172A" android:textSize="16sp"/>
+
+            <Switch android:id="@+id/switchNotificacoes" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <!-- Card Alterar Senha -->
+        <Button android:id="@+id/btnAlterarSenha" android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginTop="16dp" android:backgroundTint="@color/secondary" android:text="Alterar Senha" android:textColor="#FFFFFF" android:textStyle="bold" android:background="@drawable/bg_connecta_button"/>
+
+        <!-- Card Privacidade -->
+        <Button android:id="@+id/btnPrivacidade" android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginTop="12dp" android:backgroundTint="#FFFFFF" android:text="Privacidade" android:textColor="#0F172A" android:background="@drawable/bg_connecta_button"/>
+
+        <!-- Card Sobre -->
+        <Button android:id="@+id/btnSobre" android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginTop="12dp" android:backgroundTint="#FFFFFF" android:text="Sobre o Connecta" android:textColor="#0F172A" android:background="@drawable/bg_connecta_button"/>
+
+        <!-- Botão Sair -->
+        <Button android:id="@+id/btnSair" android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginTop="32dp" android:backgroundTint="#EF4444" android:text="Sair da Conta" android:textColor="#FFFFFF" android:textStyle="bold" android:background="@drawable/bg_connecta_button"/>
+
+    </LinearLayout>
+
+</ScrollView>

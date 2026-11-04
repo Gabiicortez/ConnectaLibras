@@ -1,0 +1,1 @@
+Leia LEIA-ME_IA.md. O projeto já inclui sua IA V6.1 adaptada para receber a câmera Android e os pesos V5 preparados do GitHub. Para os pesos mais recentes do seu PC, use a ferramenta de preparação descrita nesse documento.

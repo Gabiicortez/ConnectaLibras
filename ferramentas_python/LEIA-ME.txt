@@ -1,0 +1,7 @@
+UTILITARIO DE COMPUTADOR
+Abra esta pasta no terminal e execute: py banco.py login
+Conta inicial: admin / robertowfs1@gmail.com, senha 1234, ID 1, moderador.
+O connecta.db aqui e uma copia independente; o Android usa connecta_local.db.
+Nao ha sincronizacao. Veja ../LEIA-ME_SQLITE.md.
+Nao substitua este banco pelo arquivo de outro pacote com schema antigo.
+Para validar o pacote: py validar_integracao.py

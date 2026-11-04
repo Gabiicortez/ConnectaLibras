@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#F8FAFC">
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp" android:paddingBottom="24dp">
+<ImageButton android:id="@+id/btnVoltar" android:layout_width="48dp" android:layout_height="48dp" android:contentDescription="Voltar" android:src="@android:drawable/ic_media_previous" android:layout_marginBottom="12dp"/>
+<TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tradutor Libras" android:textSize="26sp" android:textColor="#0F766E"/>
+
+    <androidx.camera.view.PreviewView android:id="@+id/cameraPreview" android:layout_width="match_parent" android:layout_height="280dp" android:layout_marginTop="12dp" android:layout_marginBottom="12dp"/>
+<TextView android:id="@+id/txtStatusIA" android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="8dp" android:text="Sua IA Python • pronta para iniciar"/>
+<Spinner android:id="@+id/spinnerModoIA" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="8dp" android:layout_marginBottom="12dp"/>
+
+    <Button
+        android:id="@+id/btnTrocarCamera"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/bg_connecta_button"
+        android:backgroundTint="@color/secondary"
+        android:text="Trocar câmera frontal/traseira"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/btnIniciarTraducao"
+        android:layout_width="match_parent"
+        android:layout_height="31dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/bg_connecta_button"
+        android:backgroundTint="@color/secondary"
+        android:text="Iniciar Tradução"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/txtTraducao"
+        android:layout_width="378dp"
+        android:layout_height="103dp"
+        android:layout_marginTop="4dp"
+        android:padding="16dp"
+        android:text="Aguardando sinais…"
+        android:textColor="#0F172A"
+        android:textSize="22sp" />
+</LinearLayout></ScrollView>

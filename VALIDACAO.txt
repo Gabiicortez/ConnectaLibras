@@ -1,0 +1,1 @@
+Consulte VALIDACAO_IA.txt para os testes e os limites desta versão preparada para Python.

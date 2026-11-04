@@ -1,0 +1,11 @@
+ICONE DO APLICATIVO
+A logo original do Connecta agora e o icone do aplicativo no Manifest.
+Inclui icone adaptativo (Android 8+) e alternativa para Android 7.
+A logo PNG original foi preservada e usada sobre fundo claro, com margem
+para as mascaras de icone circulares e arredondadas dos launchers.
+Abra este projeto no Android Studio e gere/instale novamente o APK.
+Instalar uma atualizacao com o mesmo applicationId e assinatura preserva
+os dados locais. Nao desinstale se quiser manter os cadastros.
+Se o atalho antigo permanecer no launcher, remova apenas o atalho e adicione
+o aplicativo novamente pela lista de apps.
+Recursos XML e referencias validados; APK nao gerado neste ambiente sem SDK.

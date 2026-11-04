@@ -1,0 +1,16 @@
+{
+  "format": 1,
+  "source": "https://github.com/Gabiicortez/Connecta",
+  "commit": "9c82405e535479c38107e19435e0e5b215fe3242",
+  "features": 126,
+  "sequence_length": 48,
+  "static_classes": 30,
+  "dynamic_classes": 31,
+  "sha256": {
+    "dynamic.bin": "c611a5e7dd9bb814dc42ed64d1d1ffc7eaeea49839e85ab64221b7862f26af68",
+    "hand_landmarker.task": "fbc2a30080c3c557093b5ddfc334698132eb341044ccee322ccf8bcf3607cde1",
+    "libras_dynamic_labels_v5.json": "f5ab9b6d8464b7963ec0138a36425b530fc2d4fcf92f69538c5ea295e1c8438b",
+    "libras_static_labels_v5.json": "5e9ed7a72fb80e89dd7ef77b0a21a9760caf5be1d52e3345b579f95d44c88f4b",
+    "static.bin": "f35757b6ca3d3d51f3ca95f49d9069a602be250a031afdc58ed0d9c166867f6c"
+  }
+}
